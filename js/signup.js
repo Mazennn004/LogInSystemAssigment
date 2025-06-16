@@ -25,7 +25,7 @@ signUpBtn.addEventListener('click',function(){
         isAlreadyExisted();
         if(!accountExist){
             createUser();
-     redirectTo('/index.html');
+     redirectTo('/LogInSystemAssigment/index.html');
         }else{
             popAlert(`
 

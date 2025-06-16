@@ -47,7 +47,7 @@ passwordLogin.addEventListener('input',function(){
 
 function LogInUser(userAccount){
 localStorage.setItem('sessionName',userAccount);
-redirectTo('html/home.html');
+redirectTo('LogInSystemAssigment/html/home.html');
 }
 function validateLoginInputs(){
     for(var i=0;i<registeredUsers.length;i++){

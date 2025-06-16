@@ -10,7 +10,7 @@ logOutUser();
 
 function logOutUser(){
     localStorage.setItem('sessionName','');
-    redirectTo('/index.html');
+    redirectTo('/LogInSystemAssigment/index.html');
 
 }
 function redirectTo(pathName){

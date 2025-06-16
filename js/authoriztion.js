@@ -1,5 +1,5 @@
-if(location.pathname=='/html/home.html'&&localStorage.getItem('sessionName')==''){
-    location.pathname='/index.html';
-    console.log('working');
+if(location.pathname=='LogInSystemAssigment/html/home.html'&&localStorage.getItem('sessionName')==''){
+    location.pathname='/LogInSystemAssigment/index.html';
+    
     
 }

@@ -1,0 +1,38 @@
+.bg-login{
+    background-color: #7C2AE7;
+  
+}
+.login-title:after{
+    content:'';
+    width:30px;
+    height:2.5px;
+    display: block;
+    background-color:#7C2AE7;
+    margin-top:3px;
+
+}
+.text-login{
+    color:#7C2AE7;
+}
+.btn-login {
+    --bs-btn-color: #fff;
+    --bs-btn-border-color: #0d6efd;
+    --bs-btn-bg: #7C2AE7;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #900bd7;
+    --bs-btn-hover-border-color: #0a58ca;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #870aca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+}
+
+.signup-link:hover{
+    border-bottom: 1px solid #7C2AE7;
+    cursor: pointer;
+}
+

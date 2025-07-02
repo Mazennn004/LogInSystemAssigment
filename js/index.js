@@ -4,22 +4,18 @@ var registeredUsers=JSON.parse(localStorage.getItem('users'));
 var loginBtn=document.getElementById('loginBtn');
 var isLoginValid=false;
 var sessionName='';
-localStorage.setItem('sessionName',sessionName);
+
 
 
 
 loginBtn.addEventListener('click',function(){
     if(!isNullInputs()){
-        validateLoginInputs();
-if(isLoginValid){
-    LogInUser(sessionName);
-    clearInputs();
-}
-else{
-popAlert(`<div class="alert alert-danger mt-3" role="alert">
- Incorrect email  or Password
-</div>`);
-}
+        user={
+            "email":emailLogin.value,
+            "password":passwordLogin.value,
+        }
+        LogInUser(user);
+
 
     }
     else{
@@ -45,25 +41,34 @@ passwordLogin.addEventListener('input',function(){
 
 
 
-function LogInUser(userAccount){
-localStorage.setItem('sessionName',userAccount);
-redirectTo('LogInSystemAssigment/html/home.html');
+ async function LogInUser(userAccount){
+try{
+    const response=await fetch("https://ecommerce.routemisr.com/api/v1/auth/signin",{
+    method: "POST",
+    body:JSON.stringify(userAccount),
+    headers:{
+        "Content-Type":"application/json",
+    }
+});
+const data=await response.json();
+if(!response.ok){
+    throw new Error(data.message)
 }
-function validateLoginInputs(){
-    for(var i=0;i<registeredUsers.length;i++){
-    if(emailLogin.value==registeredUsers[i].email&&passwordLogin.value==registeredUsers[i].password){
-   isLoginValid=true;
-   sessionName=`${registeredUsers[i].username}`;
-   break;
 
-    }
-    else{
-        isLoginValid=false;
-     
-    
-    }
+
+localStorage.setItem('token',data.token);
+redirectTo('/html/home.html');
+
+
+}catch(error){
+popAlert(`
+    <div class="alert alert-danger mt-3" role="alert">
+    ${error}
+    </div>
+    `);
 }
 }
+
  function popAlert(htmlCode){
 document.getElementById('alert').innerHTML=htmlCode;
  }

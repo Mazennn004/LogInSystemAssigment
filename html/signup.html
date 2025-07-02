@@ -24,19 +24,23 @@
 
                 <div class="login-form mt-4">
                     <div class="username position-relative">
-                        <input type="text" class="form-control ps-5" id="userNameSignUp" placeholder="Username">
+                        <input name="name" type="text" class="form-control ps-5" id="userNameSignUp" placeholder="Username">
                         <i class="fa-solid fa-user fs-3 text-login position-absolute top-0 m-2"></i>
                     </div>
                   <div  class="email-input position-relative mt-3">
-                      <input type="email" class="form-control ps-5" placeholder="Email" id="emailSignUp">
+                      <input name="email" type="email" class="form-control ps-5" placeholder="Email" id="emailSignUp">
                       <i class="fa-solid fa-envelope fs-3 text-login position-absolute top-0 m-2"></i>
                     </div>
+                    <div  class="email-input position-relative mt-3">
+                      <input inputmode="numeric" name="phone" type="phone" class="form-control ps-5" placeholder="Phone Number" id="phoneSignup">
+                      <i class="fa-solid fa-phone fs-3 text-login position-absolute top-0 m-2"></i>
+                    </div>
                     <div class="password-input position-relative mt-3">
-                      <input type="password" class="form-control ps-5" placeholder="Password" id="passwordSignUp">
+                      <input name="password" type="password" class="form-control ps-5" placeholder="Password" id="passwordSignUp">
                      <i class="fa-solid fa-lock fs-3 text-login position-absolute top-0 m-2"></i>  
                     </div>
                     <div class="confirm-password position-relative mt-3">
-                        <input type="password" placeholder="Re-enter Password" class="form-control ps-5" id="passswordConfirmSignUp">
+                        <input name="rePassword" type="password" placeholder="Re-enter Password" class="form-control ps-5" id="passswordConfirmSignUp">
                         <i class="fa-solid fa-lock position-absolute top-0 fs-3 text-login m-2"></i>
                     </div>
                     <div id="alert">

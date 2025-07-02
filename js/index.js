@@ -57,7 +57,7 @@ if(!response.ok){
 
 
 localStorage.setItem('token',data.token);
-redirectTo('/html/home.html');
+redirectTo('LogInSystemAssigment/html/home.html');
 
 
 }catch(error){

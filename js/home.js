@@ -10,7 +10,7 @@ logOutUser();
 
 function logOutUser(){
     localStorage.setItem('token','');
-    redirectTo('/index.html');
+    redirectTo('LogInSystemAssigment/index.html');
 
 }
 function redirectTo(pathName){
@@ -38,7 +38,7 @@ function redirectTo(pathName){
     
     
  }catch{
-redirectTo(`/index.html`);
+redirectTo(`LogInSystemAssigment/index.html`);
 
  }
  }

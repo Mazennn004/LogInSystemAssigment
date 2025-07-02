@@ -75,7 +75,7 @@ async function registerUser(data) {
       }
     } else {
       localStorage.setItem("token", result.token);
-      redirectTo(`/html/home.html`);
+      redirectTo(`LogInSystemAssigment/html/home.html`);
     }
   } catch (error) {
     popAlert(`
